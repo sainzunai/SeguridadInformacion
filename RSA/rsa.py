@@ -2,6 +2,7 @@
 #Es necesario tenerla instalada.
 #pip intall pycryptodome
 #fuente: https://www.pythonpool.com/rsa-encryption-python/#:~:text=Report%20Ad-,What%20is%20RSA%20Encryption%20in%20python%3F,key%20and%20the%20private%20key.
+#fuente 2: https://wizardforcel.gitbooks.io/practical-cryptography-for-developers-book/content/asymmetric-key-ciphers/rsa-encrypt-decrypt-examples.html
 
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
