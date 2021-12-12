@@ -18,13 +18,14 @@ signer = DSS.new(key, 'fips-186-3') #Se crea la firma y se firma el dicumento (j
 signature = signer.sign(hash_obj)
 
 # RECEPTOR:
-# Abrir archivo y desencriptar
+# Abrir archivo y generar otra vez el hash
 f = open("public_key.pem", "r")
 hash_obj = SHA256.new(message)
+
 pub_key = DSA.import_key(f.read())
 verifier = DSS.new(pub_key, 'fips-186-3')
 
-# Verify the authenticity of the message
+# Verificacion de la autenticidad del mesaje
 try:
     verifier.verify(hash_obj, signature)
     print ("The message is authentic.")
